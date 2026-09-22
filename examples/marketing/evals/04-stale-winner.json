@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "name": "stale-winner-discount-banner",
+  "question": "Which banner should we run for the winter promo — the Discount Banner 2025 or the Value Story Banner 2026?",
+  "mustCite": [
+    "exec_banner_old_jan",
+    "exec_banner_old_apr",
+    "exec_banner_new_jun",
+    "metric_conversion_exec_banner_old_apr",
+    "metric_conversion_exec_banner_new_jun"
+  ],
+  "mustNotConclude": [
+    "Discount Banner 2025 is the stronger banner based on its historical conversion numbers"
+  ],
+  "shouldSurface": "that the Discount Banner's strong numbers all predate the repricing (its only post-repricing flight fell to ~2%), while the Value Story Banner performs consistently since",
+  "budgetTokens": 8000,
+  "mode": "balanced"
+}

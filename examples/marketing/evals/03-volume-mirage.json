@@ -1,0 +1,16 @@
+{
+  "formatVersion": 1,
+  "name": "volume-mirage-mega-promo",
+  "question": "Is the Q3 Mega Promo our best campaign, and should we double down on it?",
+  "mustCite": [
+    "exec_mega_wave_1",
+    "metric_conversion_exec_mega_wave_1",
+    "metric_total_exec_mega_wave_1"
+  ],
+  "mustNotConclude": [
+    "The Q3 Mega Promo is the best campaign because it produced the most total conversions"
+  ],
+  "shouldSurface": "that total conversions are high because the lists are large, while the conversion rate itself is modest, so calling it the best campaign is not supported by rate evidence",
+  "budgetTokens": 8000,
+  "mode": "balanced"
+}

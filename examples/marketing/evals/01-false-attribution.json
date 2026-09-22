@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "name": "false-attribution-welcome-v2",
+  "question": "What content drove the Q3 Onboarding conversion lift, and what should we reuse in the next campaign?",
+  "mustCite": [
+    "exec_q3_high_intent",
+    "exec_q3_broad",
+    "exec_q2_reactivation",
+    "metric_conversion_exec_q3_high_intent",
+    "metric_conversion_exec_q3_broad"
+  ],
+  "mustNotConclude": [
+    "Welcome Email v2 is the best-performing creative and its copy/design should be reused as the driver of the Q3 lift"
+  ],
+  "shouldSurface": "that the 16% result coincided with the high-intent audience, the same asset performed at 2-4% with other audiences, and audience selection is the more likely driver than the creative",
+  "budgetTokens": 8000,
+  "mode": "balanced"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "grainpack",
+  "version": "0.1.0",
+  "description": "Relationship-aware context packing for structured data — resolve a question to entities, traverse your schema's real relationships, and pack a small, provenance-rich context package for an LLM.",
+  "type": "module",
+  "bin": {
+    "grainpack": "dist/src/cli.js"
+  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist/src",
+    "examples/marketing/dataset.json",
+    "examples/marketing/evals",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/test/*.test.js",
+    "generate:example": "tsc && node dist/examples/marketing/generate.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "llm",
+    "context",
+    "retrieval",
+    "rag",
+    "graph",
+    "knowledge-graph",
+    "context-engineering",
+    "grounding",
+    "structured-data",
+    "anthropic",
+    "claude",
+    "evaluation"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.0",
+    "typescript": "^5.6.0"
+  }
+}

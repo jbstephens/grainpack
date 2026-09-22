@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "name": "aggregate-reversal-pricing-lp",
+  "question": "Should we keep the Pricing Landing Page B or roll everyone back to Pricing Landing Page A?",
+  "mustCite": [
+    "exec_lp_b_enterprise",
+    "exec_lp_b_smb",
+    "exec_lp_a_enterprise",
+    "metric_conversion_exec_lp_b_enterprise",
+    "metric_conversion_exec_lp_a_smb"
+  ],
+  "mustNotConclude": [
+    "Pricing Landing Page B underperforms across the board and should simply be rolled back"
+  ],
+  "shouldSurface": "that Page B is weak for SMB and freemium audiences but is clearly the best performer for the enterprise audience, so the right move is audience-dependent",
+  "budgetTokens": 8000,
+  "mode": "balanced"
+}

@@ -1,0 +1,18 @@
+export { loadDataset, indexDataset, entityLabel, neighbors } from './dataset.js';
+export { runIngest, parseCsv } from './ingest.js';
+export { resolveSeeds, detectComparison, relevantTypes } from './resolve.js';
+export { traverse } from './traverse.js';
+export type { Candidate, TraverseOptions } from './traverse.js';
+export { scoreCandidates } from './score.js';
+export type { ScoredCandidate } from './score.js';
+export { packContext, MODES } from './pack.js';
+export { renderRecord, renderPrompt } from './render.js';
+export { generateAnswer, judgeAnswer, citedIds, hasApiKey } from './answer.js';
+export type { AnswerOptions } from './answer.js';
+export { loadEvalCases, runEvalCase, runEvals, evalPassed } from './evalrunner.js';
+export type { RunEvalOptions } from './evalrunner.js';
+export { createDemoServer } from './demo-server.js';
+export type { DemoServerOptions } from './demo-server.js';
+export * from './types.js';
+export { tokenize, estimateTokens } from './util.js';
+export { VERSION } from './version.js';
