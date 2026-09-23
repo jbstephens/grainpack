@@ -10,6 +10,10 @@ the right **grain**, instead of a pile of keyword-similar records.
 npx grainpack demo     # interactive demo on a bundled synthetic dataset
 ```
 
+> **Not on npm yet?** Until the package is published, run it straight from
+> GitHub — `npx github:jbstephens/grainpack demo` — or clone the repo and
+> `npm install && node dist/src/cli.js demo`.
+
 No vector database. No embeddings. No API key needed for the core pipeline.
 One dependency (the Anthropic SDK), loaded only by the optional answer step.
 
@@ -69,9 +73,10 @@ honest token estimates, and the rendered prompt. Feed it to any LLM — or use
 
 ```bash
 # Interactive demo (bundled dataset, works with no API key)
-npx grainpack demo
-# With ANTHROPIC_API_KEY set, the demo also generates grounded answers —
-# and lets you flip to the flat baseline to watch it walk into the trap.
+npx grainpack demo                  # serves http://localhost:4680 (--port to change)
+# With ANTHROPIC_API_KEY set (read from the environment), the demo also
+# generates grounded answers — and lets you flip to the flat baseline to
+# watch it walk into the trap.
 
 # Pack a context package
 npx grainpack pack --question "What drove the Q3 Onboarding conversion lift?"
@@ -179,7 +184,9 @@ Two tiers: **deterministic** (always runs, no key): every `mustCite` id is in
 the packed selection, within budget. **Judged** (`--judge`, needs a key): the
 generated answer is graded against `mustNotConclude` / `shouldSurface` by a
 judge model, and reported separately — model-assessed results are never
-silently merged with deterministic ones.
+silently merged with deterministic ones. The deterministic tier is what CI
+runs; the judged tier is newer and has seen less real-world exercise — treat
+its verdicts as a signal to read the answer, not a substitute for reading it.
 
 The bundled dataset seeds four traps: false attribution, aggregate reversal
 (Simpson's paradox), volume mirage, and stale winner. CI runs them on every
